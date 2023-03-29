@@ -73,17 +73,25 @@
                 </script>
             </details>
 
-            <p>Pour que les styles soient bien appliqués, il faut importer les styles de bases de Swiper.</p>
+            <p>
+                Pour que les styles soient bien appliqués, il faut importer les styles de bases de Swiper ainsi que les
+                modules supportés (navigation et pagination).
+            </p>
 
             <script type="text/plain" class="language-scss">
                 # SCSS
                 @import '../../node_modules/swiper/swiper.scss';
-
-                // seulement si vous avez des modules supplémentaire comme la pagination
-                @import '../../node_modules/swiper/modules/pagination/pagination.scss';
+                @import '../../node_modules/swiper/modules/pagination/pagination';
+                @import '../../node_modules/swiper/modules/navigation/navigation';
             </script>
 
-            <a href="https://swiperjs.com/swiper-api#scss-styles" target="_blank">Voir toutes les options de Swiper</a>
+            <p>Dans la structure TimTools, la ComponentFactory s'occupe de l'instantiation des composantes.</p>
+            <script type="text/plain" class="language-scss">
+                # JS
+                new ComponentFactory()
+            </script>
+
+            <a href="componentfactory.html" target="_blank">Voir la componentFactory</a>
         </section>
 
         <section id="variantes">
