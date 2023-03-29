@@ -1,33 +1,27 @@
 {% include '_partials/_header.html' %}
 
-<section class="split" id="intro">
-    <nav class="split__nav">
-        <a href="index.html" class="brand">
-            <img src="assets/images/logo-timtools-invert.svg" alt="logo de timtools" />
-        </a>
+<section>
+    <nav>
         <ul>
             <li>
-                <a href="index.html" class="back">
-                    <svg class="icon">
-                        <use xlink:href="#icon-arrow-left"></use>
-                    </svg>
-                    Retour
-                </a>
+                <a href="index.html" class="back">Retour</a>
             </li>
             <li><a href="#intro">Introduction</a></li>
             <li><a href="#dependance">Dépendance</a></li>
             <li><a href="#utilisation">Utilisations</a></li>
             <li><a href="#variantes">Variantes</a></li>
+            <li><a href="#parametres">Paramètres</a></li>
+            <li><a href="#autres">Autre utilisation</a></li>
         </ul>
     </nav>
 
-    <div class="split__content">
-        <section class="split__section" id="intro">
+    <div>
+        <section id="intro">
             <h1>Carousel</h1>
             <p>Cette composante permet d'instancier un carousel sur un élément html.</p>
         </section>
 
-        <section class="split__section" id="dependance">
+        <section id="dependance">
             <h2>Dépendance</h2>
             <h3>Swiper</h3>
             <p>
@@ -40,24 +34,23 @@
                 npm install swiper
             </script>
 
-            <a href="https://swiperjs.com/swiper-api" class="btn" target="_blank">
-                Documentation complète
-                <svg class="icon icon--md">
-                    <use xlink:href="#icon-external"></use>
-                </svg>
-            </a>
+            <p>
+                Si vous n'êtes pas dans la structure NPM ou TimTools, référez-vous à la
+                <a href="https://swiperjs.com/swiper-api" target="_blank">documentation complète</a>
+            </p>
         </section>
 
-        <section class="split__section" id="utilisation">
+        <section id="utilisation">
             <h2>Comment l'utiliser</h2>
 
             <p>
-                Afin d'utiliser la composante, mettre l'attribut <strong>data-component="Carousel"</strong> sur une
-                structure html respectant celle de la librairie Swiper.
+                Afin d'utiliser la composante, mettre l'attribut
+                <strong>data-component="Carousel"</strong>
+                sur une structure html respectant celle de la librairie Swiper.
             </p>
             <script type="text/plain" class="language-markup">
                 # HTML
-                <div class="swiper" data-component="Carousel"></div>
+                <div class="swiper" data-component="Carousel">...</div>
             </script>
 
             <!-- HTML exemple complet -->
@@ -90,12 +83,10 @@
                 @import '../../node_modules/swiper/modules/pagination/pagination.scss';
             </script>
 
-            <a href="https://swiperjs.com/swiper-api#scss-styles" class="btn" target="_blank"
-                >Voir toutes les options de Swiper</a
-            >
+            <a href="https://swiperjs.com/swiper-api#scss-styles" target="_blank">Voir toutes les options de Swiper</a>
         </section>
 
-        <section class="split__section" id="variantes">
+        <section id="variantes">
             <h2>Variantes</h2>
             <p>
                 Les variantes permettent d'ajouter des groupes d'options préfaits afin de personaliser l'affichage d'un
@@ -107,16 +98,15 @@
                 Cette variante permet d'avoir une diapositive à la fois dans tous les résolutions d'écran. Elle ne
                 requiert aucune configuration supplémentaire.
             </p>
-            <a href="carousel-demo.html#defaut" class="btn">Voir un démo de « defaut »</a>
+            <a href="#">Voir un démo de « defaut »</a>
 
             <h3>SPLIT</h3>
             <p>
-                Cette variante permet d'avoir 2 diapositives du carousel visible en simultanné sur grand écran (1024px
+                Cette variante permet d'avoir 2.5 diapositives du carousel visible en simultanné sur grand écran (1024px
                 et plus), mais seulement une diapositive sur écran plus petit (1023px et moins).
             </p>
             <p>
-                Pour activer cette variante, il faut ajouter l'attribut suivant sur l'élément qui est votre component
-                l'attribut suivant :
+                Pour activer cette variante, il faut ajouter l'attribut suivant sur l'élément qui est votre component :
             </p>
 
             <script type="text/plain" class="language-markup">
@@ -143,7 +133,44 @@
                 </script>
             </details>
 
-            <a href="carousel-demo.html#split" class="btn">Voir un démo de « split »</a>
+            <a href="#">Voir un démo de « split »</a>
+        </section>
+
+        <section id="parametres">
+            <h2>Paramètres</h2>
+            <p>
+                Les paramètres permettent d'ajuster des options précises afin de personaliser davantage le comportement
+                du carousel.
+            </p>
+
+            <h3>AUTOPLAY</h3>
+            <p>Ce paramètre vous permet de faire défiler automatiquement le carousel.</p>
+            <script type="text/plain" class="language-markup">
+                # HTML
+                <div class="swiper" data-component="Carousel" data-autoplay>...</div>
+            </script>
+            <a href="#">Voir un démo du « autoplay »</a>
+
+            <h3>LOOP</h3>
+            <p>Ce paramètre vous permet de faire défiler à l'infini le carousel.</p>
+            <script type="text/plain" class="language-markup">
+                # HTML
+                <div class="swiper" data-component="Carousel" data-loop>...</div>
+            </script>
+            <a href="#">Voir un démo du « loop »</a>
+        </section>
+
+        <section id="autres">
+            <h2>Comment l'utiliser en dehors de TimTools</h2>
+            <p>
+                À l'intérieur d'un fichier JavaScript, importez la classe `Carousel` que vous aurez préalablement
+                intégré à votre projet.
+            </p>
+            <script type="text/plain" class="language-scss">
+                import Carousel from './Carousel';
+                new Carousel(element);
+            </script>
+            <p>Dans l'exemple ci-dessus, element est égal au HTMLElement qui l'attribut data-component="Carousel"</p>
         </section>
     </div>
 </section>

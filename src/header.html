@@ -1,58 +1,42 @@
 {% include '_partials/_header.html' %}
 
-<section class="split" id="intro">
-    <nav class="split__nav">
-        <a href="index.html" class="brand">
-            <img src="assets/images/logo-timtools-invert.svg" alt="logo de timtools" />
-        </a>
-        <ul>
+<section>
+    <div class="wrapper">
+        <h1>Header</h1>
+        <p>
+            En vous inspirant des autres documentations en exemples, créez celle-ci afin que n'importe qui, sans
+            connaissance JavaScript, puisse utiliser cette composante.
+        </p>
+        <ol>
+            <li>Brève description de la composante</li>
+            <li>Dépendances s'il y a lieu et comment les installer</li>
             <li>
-                <a href="index.html" class="back">
-                    <svg class="icon">
-                        <use xlink:href="#icon-arrow-left"></use>
-                    </svg>
-                    Retour
-                </a>
+                Comment l'utiliser (HTML + CSS + ComponentFactory)
+                <ul>
+                    <li>Comment modifier l'animation ouverture/fermeture mobile</li>
+                    <li>Quelles classes ajouter et où pour que la composante fonctionne</li>
+                </ul>
             </li>
-            <li>N'oubliez pas de mettre la nav à jour (et de supprimer ce message 🤦‍♂️)</li>
-        </ul>
-    </nav>
-
-    <div class="split__content">
-        <section class="split__section" id="intro">
-            <h1>Header</h1>
-            <p>
-                En vous inspirant de la documentation de carousel, créez celle-ci afin que n'importe qui, sans
-                connaissance JavaScript, puisse utiliser cette composante.
-            </p>
-            <ol>
-                <li>Description de la composante</li>
-                <li>Dépendances s'il y a lieu et comment les charger</li>
-                <li>
-                    Comment l'utiliser (HTML + CSS)
-                    <ul>
-                        <li>Comment modifier l'animation ouverture/fermeture mobile</li>
-                        <li>Quelles classes ajouter et où pour que la composante fonctionne</li>
-                    </ul>
-                </li>
-                <li>
-                    Classes d'états css ajoutées disponible pour manipulation dans le css, et à quel moment
-                    <ul>
-                        <li>is-scrolling-up / is-scrolling-down</li>
-                        <li>header-is-hidden (ou pas)</li>
-                    </ul>
-                </li>
-                <li>
-                    Toutes les options ajustables avec les attributs data (facultative ou pas)
-                    <ul>
-                        <li>data-auto-hide</li>
-                        <li>data-scroll-limit</li>
-                        <li>etc.</li>
-                    </ul>
-                </li>
-                <li>Toute autre information que vous jugez pertinente</li>
-            </ol>
-        </section>
+            <li>
+                Classes d'états css ajoutées disponible pour manipulation dans le css, et à quel moment
+                <ul>
+                    <li>is-scrolling-up / is-scrolling-down</li>
+                    <li>header-is-hidden (ou pas)</li>
+                </ul>
+            </li>
+            <li>
+                Toutes les options ajustables avec les attributs data (facultative ou pas)
+                <ul>
+                    <li>data-not-hiding: si présent, le header ne se cache pas au scroll</li>
+                    <li>
+                        data-scroll-limit: permet de paramétrer du HTML le seuil où le header se cache (mentionner le
+                        type de variable et valeur possibles)
+                    </li>
+                </ul>
+            </li>
+            <li>Comment l'utiliser en dehors de TimTools</li>
+            <li>Toute autre information que vous jugez pertinente</li>
+        </ol>
     </div>
 </section>
 
