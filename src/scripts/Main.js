@@ -6,8 +6,7 @@ class Main {
   }
 
   init() {
-    // À toi de jouer ! ;)
-
     Icons.load();
   }
 }
+new Main();
